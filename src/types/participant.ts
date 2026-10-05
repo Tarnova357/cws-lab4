@@ -8,5 +8,5 @@ export interface Participant {
 
 export type ParticipantFormData = Omit<Participant, 'id'>
 
-export type SortField = 'name' | 'dateOfBirth'
+export type SortField = 'name' | 'dateOfBirth' | null
 export type SortDirection = 'asc' | 'desc'
