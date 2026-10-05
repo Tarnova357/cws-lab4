@@ -33,12 +33,10 @@ const handleSort = (field: 'name' | 'dateOfBirth') => {
 }
 
 const processedParticipants = computed(() => {
-  // 1. Фільтрація за іменем
   let result = props.participants.filter((item) =>
     item.name.toLowerCase().includes(searchQuery.value.toLowerCase()),
   )
 
-  // 2. Сортування відфільтрованих даних
   if (sortField.value) {
     const currentField = sortField.value
     const directionMultiplier = sortDirection.value === 'asc' ? 1 : -1
